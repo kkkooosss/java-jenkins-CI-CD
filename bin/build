@@ -8,5 +8,6 @@ mvn package # creates target/demo.war
 mkdir -p pkg
 mv target/demo.war pkg/demo.war
 
+cat /home/ec2-user/my_password.txt | docker login --username kosdockerid --password-stdin
 docker build -t kosdockerid/demo_java_docker_jenkins .
 docker push
